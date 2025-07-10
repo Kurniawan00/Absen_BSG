@@ -1,0 +1,120 @@
+:root {
+  --bsg-red: #000000;
+  --bsg-dark: #1e1e1e;
+  --bsg-gray: #f9f9f9;
+  --radius: 8px;
+  --transition: 0.3s ease;
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+/* Global Reset */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bsg-gray);
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--bsg-dark) !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.navbar a {
+  transition: var(--transition);
+}
+.navbar a:hover {
+  opacity: 0.8;
+}
+
+/* Container */
+.container {
+  padding-top: 30px;
+  max-width: 1000px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: none;
+}
+
+/* Form Control */
+input, select {
+  border-radius: var(--radius) !important;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+}
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--bsg-red);
+  box-shadow: 0 0 0 3px rgba(164,0,0,0.2);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--bsg-red);
+  border: none;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  font-weight: 600;
+}
+.btn-primary:hover {
+  background-color: #000000;
+}
+
+.btn-dark, .btn-secondary {
+  border-radius: var(--radius);
+  font-weight: 500;
+}
+
+/* Table */
+table.table {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+.table th {
+  background: var(--bsg-red);
+  color: #fff;
+  text-align: center;
+}
+.table td {
+  vertical-align: middle;
+}
+.table img {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Editable Field */
+.editable {
+  cursor: text;
+  background-color: #fff5f5;
+  transition: background 0.2s;
+}
+.editable:focus {
+  background-color: #ffecec;
+  outline: 2px dashed var(--bsg-red);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  .navbar span {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
